@@ -1,0 +1,18 @@
+def isprime(number):
+    prime = True
+    for counter in range(2, int(number**0.5)+1):
+        if number % counter == 0:
+            prime = False
+            break
+
+    return prime
+
+
+primenumbers = []
+for i in range(2, 10001):
+    if isprime(i):
+        primenumbers.append(i)
+
+print(primenumbers)
+
+
